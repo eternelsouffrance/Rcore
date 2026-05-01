@@ -1,0 +1,170 @@
+Crée un script complet de menu administrateur nommé **LSCAdmin** pour un serveur FiveM nommé **LS Confidential**, en utilisant **RageUI** (déjà installé et fonctionnel sur le serveur). Le script doit être optimisé, structuré, sécurisé et entièrement configurable.
+
+---
+
+## ⚙️ INFORMATIONS GÉNÉRALES
+
+* Framework : ESX 
+* UI : RageUI
+* Nom ressource : `lscadmin`
+* Accès : basé sur les groupes (admin, superadmin, mod, etc.)
+* Activation menu : touche configurable (par défaut F10)
+* Logs : via webhook Discord configurable
+
+---
+
+## 🔐 SYSTÈME DE PERMISSIONS
+
+* Vérification du groupe joueur (ESX.GetPlayerData().group)
+* Accès limité selon rôle :
+
+  * mod
+  * admin
+  * superadmin
+* Possibilité de configurer les permissions dans un `config.lua`
+
+---
+
+## 📋 MENU PRINCIPAL (RageUI)
+
+Créer un menu principal avec catégories :
+
+### 👤 Gestion Joueurs
+
+* Liste des joueurs connectés
+* Actions par joueur :
+
+  * TP sur joueur
+  * TP joueur sur soi
+  * Bring / GoTo
+  * Freeze / Unfreeze
+  * Heal / Revive
+  * Donner de l'argent (cash / banque)
+  * Donner objets
+  * Voir inventaire
+  * Kick (avec raison)
+  * Ban (avec durée + raison)
+  * Screenshot joueur (si possible avec script externe)
+
+---
+
+### 🚗 Gestion Véhicules
+
+* Spawn véhicule (avec input nom)
+* Supprimer véhicule proche
+* Réparer véhicule
+* Nettoyer véhicule
+* Retourner véhicule
+* Donner véhicule à un joueur
+* Boost vitesse véhicule
+
+---
+
+### 🌍 Téléportation
+
+* TP vers waypoint
+* TP coords (input X Y Z)
+* TP lieux prédéfinis (commissariat, hôpital, etc.)
+* Sauvegarde de positions
+
+---
+
+### 🧍 Actions Joueur (self)
+
+* Godmode ON/OFF
+* Invisible ON/OFF
+* NoClip (contrôles fluides)
+* Super saut
+* Super vitesse
+* Afficher coordonnées
+* Se give arme
+* Se give argent
+
+---
+
+### 🔧 Outils Admin
+
+* Mode spectate joueur
+* Afficher noms joueurs
+* Afficher ID joueurs
+* Mode debug
+* Clear zone (PNJ, véhicules, objets)
+* Météo (changer temps)
+* Heure serveur
+
+---
+
+### 💬 Gestion Serveur
+
+* Annonce globale (input texte)
+* Message staff
+* Redémarrage serveur (commande + timer)
+* Liste des bans
+* Unban joueur
+
+---
+
+## 🧠 SYSTÈMES AVANCÉS
+
+* Anti-abus (cooldown actions)
+* Logs détaillés Discord :
+
+  * Kick
+  * Ban
+  * Give
+  * TP
+* Sauvegarde bans en base de données
+* Protection contre injection (sécuriser events)
+
+---
+
+## 📁 STRUCTURE DU SCRIPT
+
+* `client.lua`
+* `server.lua`
+* `config.lua`
+* `fxmanifest.lua`
+
+---
+
+## 🧩 CONFIG.LUA
+
+* Touche ouverture menu
+* Webhooks Discord
+* Permissions par groupe
+* Liste des lieux de TP
+* Activer/désactiver fonctionnalités
+
+---
+
+## 🎨 UI
+
+* Menu fluide RageUI
+* Sous-menus organisés
+* Icônes / emojis
+* Affichage propre et professionnel
+
+---
+
+## 🔒 SÉCURITÉ
+
+* Vérification côté serveur pour toutes actions sensibles
+* Utilisation de TriggerServerEvent sécurisés
+* Anti-cheat friendly
+
+---
+
+## 🚀 BONUS
+
+* Système de reports joueurs
+* Panel admin pour gérer reports
+* Historique actions admin
+* Interface stylée (couleurs LS Confidential)
+
+---
+
+💡 Le code doit être propre, commenté, optimisé, et prêt à être utilisé directement sur un serveur FiveM.
+
+---
+
+🎯 Objectif : créer un menu admin COMPLET, professionnel, et sécurisé pour une utilisation RP sérieuse.
